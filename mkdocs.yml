@@ -4,7 +4,7 @@ site_url: https://blog.hanadumal.work/ # Change this to your site URL
 
 theme:
     name: 'material'
-    logo:    assets/logo/dumal.jpeg
+    logo:    assets/logo/dumal.png
     favicon: assets/logo/iris.ico
     custom_dir: overrides
     font:
