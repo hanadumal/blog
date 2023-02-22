@@ -2,7 +2,6 @@ site_name: Hanadumal
 site_url: https://blog.hanadumal.work
 nav:
     - Home: 'index.md'
-    - 'Note-Taking':
     - About: '900_about/about.md'
 theme:
     name: terminal
