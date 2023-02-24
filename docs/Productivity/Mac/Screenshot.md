@@ -1,12 +1,12 @@
 ---
 date created: 2023-02-23 17:56:39 +08:00
-date updated: 2023-02-24 22:04:57 +08:00
+date updated: 2023-02-24 22:16:38 +08:00
 share: true
 category: Productivity/Mac
 ---
 你有没有日常感觉使用 ⇧ + ⌘ + 4 截出的图片文件很膈应？其实可以动动手给它名字变得简单点。
 
-## 自定义截图文件名
+## 修改截图文件名
 修改MacOS截图的名称，在文件名中增加时间，前缀设置为"ScreenShot"
 ```bash
 # default is 1, in case of you had change it, set "include-date" 1 
@@ -20,9 +20,9 @@ defaults write com.apple.screencapture name "ScreenShot"
 ![2023-02-24_21.26.01.png](../../img/2023-02-24_21.26.01.png)
 
 - 经过实验，即使`defaults write com.apple.screencapture name "ScreenShot"` 把它改写为`defaults write com.apple.screencapture name ""`,你会发现截图文件开头仍然会带有一个" "
-- 也没有官方的设置可以把" at "去掉，用自定义的时间格式字符串`%Y%M%H %H.%m.%s`来定制
+- 也没有官方的设置可以把" at "去掉，用自定义的时间格式字符串`%Y-%M-%H %H.%m.%s`来定制
 
-## 自动截图改名服务
+## 增加自动改名服务
 
 既然没有特别方便的办法对文件修改，参考[Launchd > 任务(Job)定义](./Launchd.md#任务(Job)定义)中的知识，可以在MacOS后台增加一个Agent服务，监听Desktop/（我的截图文件保存目录），一旦有新文件生成，对其重命名。让我们一步一步将其实现。
 
@@ -40,7 +40,7 @@ mv ~/Desktop/ScreenShot*.png ~/Desktop/"`date "+%Y-%m-%d-%H.%M.%S"`.png"
 chmod +x /usr/local/bin/screencap_rename.sh
 ```
 
-3. 自定义一个launchd服务，监听~/Desktop/目录。将其保存到~/Library/LaunchAgents/usr.screenshot.rename.plist
+3. 自定义一个launchd服务，监听~/Desktop/目录。将其保存到`~/Library/LaunchAgents/usr.screenshot.rename.plist`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -90,14 +90,10 @@ done
 IFS=$SAVEIFS
 ```
 
-5. 可能仍然会报错找不到路径，需要**Full Disk Access**了
+5. 如果仍然会报错、找不到路径，那就需要授予**Full Disk Access**给sh命令了。
 
-![ScreenShot 2023-02-23 at 21.06.36.png](../../img/ScreenShot%202023-02-23%20at%2021.06.36.png)
-怀疑是不是没有赋予全部访问权限的问题。确认了在把脚本和plist都修改成sh，并且赋给sh FULL Disk Access以后，问题解决。
 
-又顺带学习shell中字符处理的方法。https://blog.csdn.net/dongwuming/article/details/50605911
-
-## TLDR 最终直接看这里
+## 最终直接看这里
 
 先修改下screencapture的参数，保持默认不修改也行
 ```sh
