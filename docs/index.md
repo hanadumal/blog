@@ -7,4 +7,9 @@ share: true
 | Item                                   | 说明                                     |
 | -------------------------------------- | ---------------------------------------- |
 | 100 [Productivity](100-Productivity.md) | 提升效率，减轻身心负担的软件、硬件、技巧 |
-| [200-Python](200-Python.md)    | 我最喜欢用的时间最久的语言               |
+| [200-Python](200-Python.md)                         | 我最喜欢用的时间最久的语言               |
+
+
+
+[100-Productivity](100-Productivity.md)
+[200-Python](200-Python.md)
