@@ -1,12 +1,19 @@
 ---
 date created: 2023-02-24 14:43:14 +08:00
-date updated: 2023-02-24 14:44:34 +08:00
+date updated: 2023-02-24 15:02:37 +08:00
 share: true
 ---
 ### Launchd是什么
 [Wikipedia](http://en.wikipedia.org/wiki/Launchd) defines launchd as "a unified, open-source service management framework for starting, stopping and managing daemons, applications, processes, and scripts. Written and designed by Dave Zarzycki at Apple, it was introduced with Mac OS X Tiger and is licensed under the Apache License."
 
 一句话概括：Launchd是MacOS上用来管理后台服务进程的框架。
+
+| Method      | Description                          |
+| ----------- | ------------------------------------ |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
+
 
 被管理的后台服务有两种：Daemon和Agent。
 - Daemon是系统或者管理员定义的维护性后台程序，在系统启动以后加载
@@ -15,9 +22,9 @@ share: true
 | -------------- | ---------------------- | ------------------------ |
 | User Agents    | ~/Library/LaunchAgents | Currently logged in user |
 | Global Agents  | /Library/LaunchAgents  | Currently logged in user |
-| System Agents  |     /System/Library/LaunchAgents                   |      Currently logged in user                    |
-| Global Daemons |    /Library/LaunchDaemons                    |        root                  |
-| System Daemons               |     /System/Library/LaunchDaemons                   |     root                     |
+| System Agents  | /System/Library/LaunchAgents | Currently logged in user |
+| Global Daemons | /Library/LaunchDaemons | root                     |
+| System Daemons | /System/Library/LaunchDaemons |     root          |
 
 ### 任务(Job)定义
 在系统中用来控制Daemon/Agent的行为是用一个xml格式的.plist文件定。根据上面列表中存储位置的不同来区分是daemon还是agent。如将其放置到~/Library/LaunchAgents目录下，那么在用户登陆后会自动加载这个xml中配置的程序在适当的时候触发执行。
