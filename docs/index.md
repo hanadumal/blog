@@ -6,6 +6,8 @@ share: true
 
 | Item                          | 说明                                     |
 | ----------------------------- | ---------------------------------------- |
-| 100 [[Launchd\|Productivity]] | 提升效率，减轻身心负担的软件、硬件、技巧 |
-| 200 [[log\|Python]]           | 我最喜欢用的时间最久的语言               |
+| 100 [Productivity](Launchd.md) | 提升效率，减轻身心负担的软件、硬件、技巧 |
+| 200 [Python](log.md)           | 我最喜欢用的时间最久的语言               |
 
+[_index](_index.md)
+[RSS](obsidian://open?vault=personal&file=100%20-%20Productivity%2FRSS)
