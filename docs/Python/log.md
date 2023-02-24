@@ -1,7 +1,8 @@
 ---
 date created: 2022-11-23 17:42:28 +08:00
-date updated: 2023-02-24 16:30:52 +08:00
+date updated: 2023-02-24 21:10:29 +08:00
 share: true
+category: Python
 ---
 # loguru
 
