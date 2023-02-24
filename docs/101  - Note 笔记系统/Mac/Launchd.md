@@ -8,23 +8,17 @@ share: true
 
 一句话概括：Launchd是MacOS上用来管理后台服务进程的框架。
 
-| Method      | Description                          |
-| ----------- | ------------------------------------ |
-| `GET`       | :material-check:     Fetch resource  |
-| `PUT`       | :material-check-all: Update resource |
-| `DELETE`    | :material-close:     Delete resource |
-
-
 被管理的后台服务有两种：Daemon和Agent。
 - Daemon是系统或者管理员定义的维护性后台程序，在系统启动以后加载
 - Agent是系统/管理员/用户定义的在登陆后才加载的程序
-| Type           | Location               | Run on behalf of         |
-| -------------- | ---------------------- | ------------------------ |
-| User Agents    | ~/Library/LaunchAgents | Currently logged in user |
-| Global Agents  | /Library/LaunchAgents  | Currently logged in user |
-| System Agents  | /System/Library/LaunchAgents | Currently logged in user |
-| Global Daemons | /Library/LaunchDaemons | root                     |
-| System Daemons | /System/Library/LaunchDaemons |     root          |
+
+| Type           | Location                      | Run on behalf of         |
+| -------------- | ----------------------------- | ------------------------ |
+| User Agents    | ~/Library/LaunchAgents        | Currently logged in user |
+| Global Agents  | /Library/LaunchAgents         | Currently logged in user |
+| System Agents  | /System/Library/LaunchAgents  | Currently logged in user |
+| Global Daemons | /Library/LaunchDaemons        | root                     |
+| System Daemons | /System/Library/LaunchDaemons | root                     |
 
 ### 任务(Job)定义
 在系统中用来控制Daemon/Agent的行为是用一个xml格式的.plist文件定。根据上面列表中存储位置的不同来区分是daemon还是agent。如将其放置到~/Library/LaunchAgents目录下，那么在用户登陆后会自动加载这个xml中配置的程序在适当的时候触发执行。
@@ -61,7 +55,7 @@ share: true
 | StandardInPath        | Environment   | 标准输入路径                           |
 | StandardOutPath       | Environment   | 标准输出路径                           |
 | StandardErrorPath     | Environment   | 标准错误输出路径                       |
-| WorkingDirectory      | Environment   | 工作目录,默认是/                              |
+| WorkingDirectory      | Environment   | 工作目录,默认是/                       |
 | SoftSourceLimit       | Job Constrain | 使用资源的软顶                         |
 | HardSourceLimit       | Job Constrain | 使用资源的硬顶                         |
 | RunAtLoad             | When to Start | Load后启动                             |
@@ -69,7 +63,7 @@ share: true
 | StartCalendarInterval | When to Start | 固定的日期时间执行                     |
 | StartOnMount          | When to Start | 设备挂载后执行                         |
 | WatchPaths            | When to Start | 路径变更后执行                         |
-| ...                      |         ...      |      ...                                  |
+| ...                   | ...           | ...                                    |
 
 ### 管理命令launchctl
 我们已经知道daemons在系统启动后加载，agent在用户登陆后加载。其实使用`launchctl`可以手动对任务进行操作。
