@@ -1,8 +1,9 @@
 ---
 date created: 2023-02-24 14:43:14 +08:00
-date updated: 2023-02-24 15:02:37 +08:00
+date updated: 2023-02-24 16:44:36 +08:00
 share: true
 ---
+
 ## Launchd是什么
 
 [Wikipedia](http://en.wikipedia.org/wiki/Launchd) defines launchd as "a unified, open-source service management framework for starting, stopping and managing daemons, applications, processes, and scripts. Written and designed by Dave Zarzycki at Apple, it was introduced with Mac OS X Tiger and is licensed under the Apache License."
@@ -108,7 +109,7 @@ Load一个任务不代表执行这个任务中的命令。这因为Job可以配�
 brew install launchcontrol
 ```
 
-![[Pasted image 20230224140720.png]]
+![Pasted image 20230224140720.png](Pasted%20image%2020230224140720.png)
 
 ## 常见问题
 
@@ -121,7 +122,7 @@ chmod +x /Users/Me/Scripts/cleanup.sh
 2. 权限问题：如果Program是.sh文件，那么`sh`命令本身需要具有Full Disk Access权限。
 在Privacy&Security -> Full Disk Access中打开sh的权限。如果用的bash/zsh则替换为对应的。
 
-![[2023-02-24_14.39.46.png]]
+![2023-02-24_14.39.46.png](2023-02-24_14.39.46.png)
 
 ## 手册&工具
 
