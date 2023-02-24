@@ -2,6 +2,7 @@
 date created: 2023-02-23 17:56:39 +08:00
 date updated: 2023-02-24 21:04:19 +08:00
 share: true
+category: Productivity/Mac
 ---
 
 修改截图名称
@@ -138,7 +139,7 @@ IFS=$SAVEIFS
 ```
 ls: /Users/wangsheng/Desktop/ScreenShot*.png: No such file or directory
 ```
-![ScreenShot 2023-02-23 at 21.06.36.png](../img/ScreenShot%202023-02-23%20at%2021.06.36.png)
+![ScreenShot 2023-02-23 at 21.06.36.png](../../img/ScreenShot%202023-02-23%20at%2021.06.36.png)
 怀疑是不是没有赋予全部访问权限的问题。确认了在把脚本和plist都修改成sh，并且赋给sh FULL Disk Access以后，问题解决。
 
 又顺带学习shell中字符处理的方法。https://blog.csdn.net/dongwuming/article/details/50605911
@@ -226,7 +227,7 @@ launchctl load ~/Library/LaunchAgents/usr.screenshot.rename.plist
 
 疑问：
 FULL ACCESS想添加bash，从哪里找到bash呢？Macintoch？
-![ScreenShot 2023-02-23 at 21.47.06.png](../img/ScreenShot%202023-02-23%20at%2021.47.06.png)
+![ScreenShot 2023-02-23 at 21.47.06.png](../../img/ScreenShot%202023-02-23%20at%2021.47.06.png)
 [1]  [how to change the format of osx screenshot](https://apple.stackexchange.com/questions/251385/how-do-you-change-the-format-of-the-osx-screen-shot-file-name)
 
 todo: 整合成一键脚本
