@@ -8,7 +8,7 @@ comments: true
 
 ## Monitor
 - Dell UltraSharp 2412M * 2 (2015~2019 ｜ RMB 1699 + 1749)
-- ✅ Benq PD2700U (2019~｜RMB 3353)
+- ✅ Benq PD2700U (2019~now｜RMB 3353)
 	- support HDMI 2.0
 	- support DP 1.4 
 
