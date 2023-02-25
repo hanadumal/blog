@@ -2,7 +2,7 @@
 date created: 2023-02-20 17:35:30 +08:00
 date updated: 2023-02-25 18:50:26 +08:00
 share: true
-category: zh/Productivity
+category: Productivity
 
 ---
 逃离信息过载，掌握信息摄入的主动权。
@@ -33,11 +33,11 @@ npm install
 
 在RSSHub的根目录下，创建.env配置文件。
 我主要添加了Youtube、Twitter的配置。另外因为仅供自己使用，添加访问控制的AccessKey。
-![2023-02-20_at_17_39_43.png](../../img/2023-02-20_at_17_39_43.png)
+![2023-02-20_at_17_39_43.png](../img/2023-02-20_at_17_39_43.png)
 
 这样当访问中不带accessKey，会Access Denied，如下所示：
 
-![2023-02-20_at_17_59_09.png](../../img/2023-02-20_at_17_59_09.png)
+![2023-02-20_at_17_59_09.png](../img/2023-02-20_at_17_59_09.png)
 ### 3.手动从后台启动
 
 ```
