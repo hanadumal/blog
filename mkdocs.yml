@@ -6,15 +6,14 @@ site_url: https://blog.hanadumal.work/ # Change this to your site URL
 
 theme:
     name: 'material'
-    logo:    assets/logo/dumal.png
+    language: en
+    logo: assets/logo/dumal.png
     favicon: assets/logo/iris.ico
     custom_dir: overrides
     font:
         text: Ubuntu
         code: Ubuntu Mono
-    language: en
     palette:
-
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -33,11 +32,12 @@ theme:
         icon: material/toggle-switch
         name: Switch to light mode
     features:
-        - navigation.indexes
-        - navigation.top
+        # - navigation.indexes
         - navigation.tabs
         - navigation.tabs.sticky
         - navigation.expand
+        - navigation.top
+        - toc.follow
         - search.suggest
         - search.highlight
         
@@ -134,12 +134,13 @@ extra_css:
     - assets/css/customization.css
 extra:
   alternate:
+    - name: 简体中文
+      link: /zh/
+      lang: zh
     - name: English
       link: /en/
       lang: en
-    - name: Chinese
-      link: /zh/
-      lang: zh
+
   SEO: assets/meta/SEO.png
   comments: true #enable comments globally
   generate_graph: true #generate the graph of the site
