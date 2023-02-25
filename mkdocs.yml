@@ -32,6 +32,7 @@ theme:
         - navigation.tabs.sticky
         - navigation.expand
         - navigation.top
+        - navigation.footer
         - toc.follow
         - search.suggest
         - search.highlight
