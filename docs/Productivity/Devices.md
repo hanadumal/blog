@@ -1,12 +1,12 @@
 ---
 date created: 2022-12-13 18:52:58 +08:00
-date updated: 2023-02-25 18:50:19 +08:00
+date updated: 2023-02-26 00:54:32 +08:00
 category: Productivity
 share: true
 comments: true
 ---
 
-## Monitor
+# Monitor
 - Dell UltraSharp 2412M * 2 (2015~2019 ｜ RMB 1699 + 1749)
 - ✅ Benq PD2700U (2019~now｜RMB 3353)
 	- support HDMI 2.0
@@ -16,7 +16,7 @@ comments: true
 Macbook -> Apple 60hz adapter  -> hdmi-hdmi(60hz) cable -> HDMI (max 60hz)
 Acer    -> hdmi-dp(60hz) cable -> DisplayPort(max 60hz)
 
-## Adapter
+###[]() Adapter
 - ✅ USB-C Digital AV Multiport Adapter (HDMI+USB+USB C | RMB 486 😡)
 - ✅ UGreen 绿联6合一 (HDMI+读卡+USB3.0\*3 | RMB 139)
 - ✅ 联想来酷 (HDMI+PD+USB3.0\*3 | RMB 105 👎) 
