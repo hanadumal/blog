@@ -46,6 +46,7 @@ markdown_extensions:
   - attr_list
   - sane_lists
   - meta
+      meta_file: '**/.meta.yml'
   - smarty
   - tables
   - mdx_breakless_lists
