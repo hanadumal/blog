@@ -3,6 +3,7 @@
 site_name: Hanadumal # Change this to your site name
 site_description: Hanadumal's Blog
 site_url: https://blog.hanadumal.work/ # Change this to your site URL
+copyright: Copyright &copy; 2023 Hanadumal
 
 theme:
     name: 'material'
