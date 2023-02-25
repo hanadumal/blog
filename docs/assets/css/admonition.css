@@ -13,6 +13,7 @@
 }
 .md-typeset .dictionnary > .admonition-title::before,
 .md-typeset .dictionnary > summary::before {
-  background-color: rgb(43, 155, 70);
-  -webkit-mask-image: var(--md-admonition-icon--dictionnary);
-          mask-image: var(--md-admonition-icon--dictionnary);
+    background-color: rgb(43, 155, 70);
+    -webkit-mask-image: var(--md-admonition-icon--dictionnary);
+    mask-image: var(--md-admonition-icon--dictionnary);
+}
