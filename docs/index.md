@@ -6,5 +6,5 @@ share: true
 
 | Item                  | 说明                               |
 | --------------------- | ---------------------------------- |
-| [Productivity](./Productivity/RSS.md) | 提升效率减轻负担的软件、硬件、技巧 |
+| [Productivity](./zh/Productivity/RSS.md) | 提升效率减轻负担的软件、硬件、技巧 |
 | [Python](./Python/log.md)       | 我最喜欢用的时间最久的语言         |

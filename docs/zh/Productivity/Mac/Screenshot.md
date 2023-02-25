@@ -1,8 +1,8 @@
 ---
 date created: 2023-02-23 17:56:39 +08:00
-date updated: 2023-02-24 22:16:38 +08:00
+date updated: 2023-02-25 18:50:00 +08:00
 share: true
-category: Productivity/Mac
+category: zh/Productivity/Mac
 ---
 你有没有日常感觉使用 ⇧ + ⌘ + 4 截出的图片文件很膈应？其实可以动动手给它名字变得简单点。
 
@@ -17,7 +17,7 @@ defaults write com.apple.screencapture name "ScreenShot"
 
 经过配置后，生成的截图文件名如下图。但文件名包含有"ScreenShot" "at"和多个空格，能不能只保留日期和时间呢？
 
-![2023-02-24_21.26.01.png](../../img/2023-02-24_21.26.01.png)
+![2023-02-24_21.26.01.png](../../../img/2023-02-24_21.26.01.png)
 
 - 经过实验，即使`defaults write com.apple.screencapture name "ScreenShot"` 把它改写为`defaults write com.apple.screencapture name ""`,你会发现截图文件开头仍然会带有一个" "
 - 也没有官方的设置可以把" at "去掉，用自定义的时间格式字符串`%Y-%M-%H %H.%m.%s`来定制
@@ -156,7 +156,7 @@ launchctl load ~/Library/LaunchAgents/usr.screenshot.rename.plist
 【Attention!】需要在Privacy&Security -> **Full Disk Access中打开sh的权限**。如果用的bash/zsh则替换为对应的。[Launchd > 常见问题](./Launchd.md#常见问题)
 
 剩下就是去截图了，它们都会整整齐齐清爽的罗在目录里。
-![2023-02-24_22.04.03.png](../../img/2023-02-24_22.04.03.png)
+![2023-02-24_22.04.03.png](../../../img/2023-02-24_22.04.03.png)
 
 ## 参考
 [1]  [how to change the format of osx screenshot](https://apple.stackexchange.com/questions/251385/how-do-you-change-the-format-of-the-osx-screen-shot-file-name)
