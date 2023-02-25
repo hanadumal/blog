@@ -1,9 +1,8 @@
 ---
 date created: 2023-02-20 17:35:30 +08:00
-date updated: 2023-02-25 18:50:26 +08:00
+date updated: 2023-02-26 01:32:00 +08:00
 share: true
 category: Productivity
-
 ---
 逃离信息过载，掌握信息摄入的主动权。
 
@@ -15,11 +14,11 @@ category: Productivity
 ![ 2023-02-23 at 12.36.38.png](2023-02-23%20at%2012.36.38.png)
 
 
-## 部署属于你自己的RSSHub
+# 部署属于你自己的RSSHub
 
 针对不支持RSS的网站/平台，借助RSSHub就可以轻松的制作RSS源。比如把B站某个UP主的视频更新，直接以RSS的形式推送给你；把twitter大V的发言自动抓取等。
 
-### 1.手动安装过程
+## 1.手动安装过程
 
 ```bash
 git clone https://github.com/DIYgod/RSSHub.git
@@ -29,7 +28,7 @@ npm install
 ```
 更详细可参考 [RSSHub官方部署文档](https://docs.rsshub.app/install/#shou-dong-bu-shu-an-zhuang)
 
-### 2.额外但必须的配置
+## 2.额外但必须的配置
 
 在RSSHub的根目录下，创建.env配置文件。
 我主要添加了Youtube、Twitter的配置。另外因为仅供自己使用，添加访问控制的AccessKey。
@@ -38,13 +37,13 @@ npm install
 这样当访问中不带accessKey，会Access Denied，如下所示：
 
 ![2023-02-20_at_17_59_09.png](../img/2023-02-20_at_17_59_09.png)
-### 3.手动从后台启动
+## 3.手动从后台启动
 
 ```
 pm2 start lib/index.js --name rsshub
 ```
 
-### 4.systemd开机启动
+## 4.systemd开机启动
 
 ```
 vim /etc/systemd/system/rsshub.service
@@ -83,7 +82,7 @@ systemctl status rsshub
 systemctl enable rsshub
 ```
 
-### 5.添加自动更新
+## 5.添加自动更新
 
 ```
 # pull RSSHub At 04:00 on Sunday  
