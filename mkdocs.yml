@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
 site_name: Hanadumal # Change this to your site name
 site_description: Hanadumal's Blog
 site_url: https://blog.hanadumal.work/ # Change this to your site URL
@@ -131,6 +133,13 @@ extra_css:
     - assets/css/custom_attributes.css
     - assets/css/customization.css
 extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Chinese
+      link: /zh/
+      lang: zh
   SEO: assets/meta/SEO.png
   comments: true #enable comments globally
   generate_graph: true #generate the graph of the site
