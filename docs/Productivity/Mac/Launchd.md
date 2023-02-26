@@ -1,6 +1,6 @@
 ---
 date created: 2023-02-24 14:43:14 +08:00
-date updated: 2023-02-27 01:28:38 +08:00
+date updated: 2023-02-27 01:30:29 +08:00
 title: Launchd
 share: true
 category: Productivity/Mac
@@ -16,6 +16,7 @@ category: Productivity/Mac
 - Daemon是系统或者管理员定义的维护性程序，在系统启动以后加载
 - Agent是系统/管理员/用户定义的在登陆后才加载的程序
 按服务类型和配置文件存储路径可进一步划分:
+
 | Type           | Location                      | Run on behalf of         |
 | -------------- | ----------------------------- | ------------------------ |
 | User Agents    | ~/Library/LaunchAgents        | Currently logged in user |
@@ -26,7 +27,7 @@ category: Productivity/Mac
 
 ## 任务(Job)定义
 
-在上面列表中的路径下存储了各个plist文件，它们控制着Daemon/Agent行为。plist文件采用xml格式。根据存储名称的不同，很容易区分是Daemon还是Agent。例如将其放置到~/Library/LaunchAgents目录下：那么这明显是一个Agent任务；在用户登陆后自动加载这个plist中配置的程序，并在适当的时候触发执行。
+在上面列表中的路径下存储了各个plist文件，它们控制着Daemon/Agent行为。plist文件采用xml格式。根据存储名称的不同，很容易区分是Daemon还是Agent。例如将其放置到~/Library/LaunchAgents目录下：那么这明显是一个Agent任务，在用户登陆后自动加载这个plist中配置的程序，并在适当的时候触发执行。
 
 **一个最简单的任务需定义3个字段**
 
