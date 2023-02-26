@@ -1,6 +1,6 @@
 ---
 date created: 2023-02-24 14:43:14 +08:00
-date updated: 2023-02-27 01:26:35 +08:00
+date updated: 2023-02-27 01:28:38 +08:00
 title: Launchd
 share: true
 category: Productivity/Mac
@@ -10,9 +10,9 @@ category: Productivity/Mac
 
 [Wikipedia](http://en.wikipedia.org/wiki/Launchd) defines launchd as "a unified, open-source service management framework for starting, stopping and managing daemons, applications, processes, and scripts. Written and designed by Dave Zarzycki at Apple, it was introduced with Mac OS X Tiger and is licensed under the Apache License."
 
-一句话概括：Launchd是MacOS上用来管理后台服务进程的框架。
+一句话概括：Launchd是MacOS上用来管理后台任务的框架。
 
-被管理的后台服务有两种类型：Daemon和Agent。
+被管理的后台任务有两种类型：Daemon和Agent。
 - Daemon是系统或者管理员定义的维护性程序，在系统启动以后加载
 - Agent是系统/管理员/用户定义的在登陆后才加载的程序
 按服务类型和配置文件存储路径可进一步划分:
