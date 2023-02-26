@@ -1,6 +1,7 @@
 ---
 date created: 2023-02-24 14:43:14 +08:00
-date updated: 2023-02-25 18:49:52 +08:00
+date updated: 2023-02-27 01:01:24 +08:00
+file: Launchd
 share: true
 category: Productivity/Mac
 ---
