@@ -1,13 +1,13 @@
 ---
 date created: 2023-02-23 17:56:39 +08:00
-date updated: 2023-02-27 01:12:47 +08:00
+date updated: 2023-02-27 01:33:03 +08:00
 title: Screenshot
 share: true
 category: Productivity/Mac
 ---
 你有没有日常感觉使用 ⇧ + ⌘ + 4 截出的图片文件很膈应？其实可以动动手给它名字变得简单点。
 
-## 修改截图文件名
+# 截图文件名设置
 修改MacOS截图的名称，在文件名中增加时间，前缀设置为"ScreenShot"
 ```bash
 # default is 1, in case of you had change it, set "include-date" 1 
@@ -23,7 +23,7 @@ defaults write com.apple.screencapture name "ScreenShot"
 - 经过实验，即使`defaults write com.apple.screencapture name "ScreenShot"` 把它改写为`defaults write com.apple.screencapture name ""`,你会发现截图文件开头仍然会带有一个" "
 - 也没有官方的设置可以把" at "去掉，用自定义的时间格式字符串`%Y-%M-%H %H.%m.%s`来定制
 
-## 增加自动改名服务
+# 自动改名服务
 
 既然没有特别方便的办法对文件修改，参考[Launchd > 任务(Job)定义](./Launchd.md#任务(Job)定义)中的知识，可以在MacOS后台增加一个Agent服务，监听Desktop/（我的截图文件保存目录），一旦有新文件生成，对其重命名。让我们一步一步将其实现。
 
@@ -94,7 +94,7 @@ IFS=$SAVEIFS
 5. 如果仍然会报错、找不到路径，那就需要授予**Full Disk Access**给sh命令了。
 
 
-## 最终直接看这里
+# 最终直接看这里
 
 先修改下screencapture的参数，保持默认不修改也行
 ```sh
@@ -159,7 +159,7 @@ launchctl load ~/Library/LaunchAgents/usr.screenshot.rename.plist
 剩下就是去截图了，它们都会整整齐齐清爽的罗在目录里。
 ![2023-02-24_22.04.03.png](../../img/2023-02-24_22.04.03.png)
 
-## 参考
+# 参考
 [1]  [how to change the format of osx screenshot](https://apple.stackexchange.com/questions/251385/how-do-you-change-the-format-of-the-osx-screen-shot-file-name)
 
 
