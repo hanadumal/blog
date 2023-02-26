@@ -1,20 +1,21 @@
 ---
 date created: 2023-02-24 14:43:14 +08:00
-date updated: 2023-02-27 01:30:29 +08:00
+date updated: 2023-02-27 01:42:33 +08:00
 title: Launchd
 share: true
 category: Productivity/Mac
 ---
 
-## Launchd是什么
+# Launchd是什么
 
 [Wikipedia](http://en.wikipedia.org/wiki/Launchd) defines launchd as "a unified, open-source service management framework for starting, stopping and managing daemons, applications, processes, and scripts. Written and designed by Dave Zarzycki at Apple, it was introduced with Mac OS X Tiger and is licensed under the Apache License."
 
-一句话概括：Launchd是MacOS上用来管理后台任务的框架。
+一句话概括：**Launchd是MacOS上用来管理后台任务的框架。**
 
 被管理的后台任务有两种类型：Daemon和Agent。
 - Daemon是系统或者管理员定义的维护性程序，在系统启动以后加载
 - Agent是系统/管理员/用户定义的在登陆后才加载的程序
+
 按服务类型和配置文件存储路径可进一步划分:
 
 | Type           | Location                      | Run on behalf of         |
@@ -25,7 +26,7 @@ category: Productivity/Mac
 | Global Daemons | /Library/LaunchDaemons        | root                     |
 | System Daemons | /System/Library/LaunchDaemons | root                     |
 
-## 任务(Job)定义
+# 任务(Job)定义
 
 在上面列表中的路径下存储了各个plist文件，它们控制着Daemon/Agent行为。plist文件采用xml格式。根据存储名称的不同，很容易区分是Daemon还是Agent。例如将其放置到~/Library/LaunchAgents目录下：那么这明显是一个Agent任务，在用户登陆后自动加载这个plist中配置的程序，并在适当的时候触发执行。
 
@@ -75,7 +76,7 @@ category: Productivity/Mac
 | WatchPaths            | When to Start | 路径变更后执行                         |
 | ...                   | ...           | ...                                    |
 
-## 任务管理命令
+# 任务管理命令
 
 我们已经知道Daemons在系统启动后加载，而Agent在用户登陆后加载。其实还可以使用`launchctl`以手动方式对任务进行操作。
 
@@ -114,7 +115,7 @@ brew install launchcontrol
 
 ![Pasted image 20230224140720.png](../../img/Pasted%20image%2020230224140720.png)
 
-## 常见问题
+# 常见问题
 
 1. 执行权限问题。plist文件中配置的Program需要有可执行权限，可通过如下命令添加
 
@@ -127,7 +128,7 @@ chmod +x /Users/Me/Scripts/cleanup.sh
 
 ![2023-02-24_14.39.46.png](../../img/2023-02-24_14.39.46.png)
 
-## 参考工具
+# 参考工具
 
 1. [launchd.info | launchd的完全参考手册](https://www.launchd.info/)
 2. [LaunchControl](https://www.soma-zone.com/LaunchControl/)
