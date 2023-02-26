@@ -1,7 +1,7 @@
 ---
 date created: 2023-02-24 14:43:14 +08:00
-date updated: 2023-02-27 01:01:24 +08:00
-file: Launchd
+date updated: 2023-02-27 01:26:35 +08:00
+title: Launchd
 share: true
 category: Productivity/Mac
 ---
@@ -12,10 +12,10 @@ category: Productivity/Mac
 
 一句话概括：Launchd是MacOS上用来管理后台服务进程的框架。
 
-被管理的后台服务有两种：Daemon和Agent。
-- Daemon是系统或者管理员定义的维护性后台程序，在系统启动以后加载
+被管理的后台服务有两种类型：Daemon和Agent。
+- Daemon是系统或者管理员定义的维护性程序，在系统启动以后加载
 - Agent是系统/管理员/用户定义的在登陆后才加载的程序
-
+按服务类型和配置文件存储路径可进一步划分:
 | Type           | Location                      | Run on behalf of         |
 | -------------- | ----------------------------- | ------------------------ |
 | User Agents    | ~/Library/LaunchAgents        | Currently logged in user |
@@ -26,9 +26,9 @@ category: Productivity/Mac
 
 ## 任务(Job)定义
 
-在系统中用来控制Daemon/Agent的行为是用一个xml格式的.plist文件定。根据上面列表中存储位置的不同来区分是daemon还是agent。如将其放置到~/Library/LaunchAgents目录下，那么在用户登陆后会自动加载这个xml中配置的程序在适当的时候触发执行。
+在上面列表中的路径下存储了各个plist文件，它们控制着Daemon/Agent行为。plist文件采用xml格式。根据存储名称的不同，很容易区分是Daemon还是Agent。例如将其放置到~/Library/LaunchAgents目录下：那么这明显是一个Agent任务；在用户登陆后自动加载这个plist中配置的程序，并在适当的时候触发执行。
 
-**一个最简单的任务定义如下**
+**一个最简单的任务需定义3个字段**
 
 - Label设置服务名称
 - Program设置服务运行每次要执行的命令
@@ -51,9 +51,9 @@ category: Productivity/Mac
 </plist>
 ```
 
-**plist中的详细配置**
+**plist中的配置很丰富**
 
-这里只列出部分常用的，找完备的配置强力推荐：[launchd.info | launchd的完全参考手册](https://www.launchd.info/)
+这里只列出部分常用的，完整的配置强力推荐参考：[launchd.info | launchd的完全参考手册](https://www.launchd.info/)
 
 | Key                   | 属性类别      | 说明                                   |
 | --------------------- | ------------- | -------------------------------------- |
@@ -74,11 +74,11 @@ category: Productivity/Mac
 | WatchPaths            | When to Start | 路径变更后执行                         |
 | ...                   | ...           | ...                                    |
 
-## 管理命令launchctl
+## 任务管理命令
 
-我们已经知道daemons在系统启动后加载，agent在用户登陆后加载。其实使用`launchctl`可以手动对任务进行操作。
+我们已经知道Daemons在系统启动后加载，而Agent在用户登陆后加载。其实还可以使用`launchctl`以手动方式对任务进行操作。
 
-**命令行工具**
+**命令行工具**:launchctl
 
 - 加载(Load)任务
 ```
@@ -99,13 +99,13 @@ launchctl list|grep com.example.app
 
 **Load和Start的区别**
 
-Load一个任务不代表执行这个任务中的命令。这因为Job可以配置不同的启动场景，比如：网卡就绪后执行、文件夹中有变更时执行、固定时间18:00执行、间隔1min执行一次，等等，非常灵活。
+对任务进行Load操作，不代表执行这个任务中的命令。这是因为任务可以配置不同的启动执行场景，比如：网卡就绪后执行、文件夹中有变更时执行、固定时间18:00执行、间隔1min执行一次，等等，非常灵活。
 
 调用`launchctl start`会手动触发任务中的命令（不管它配置的启动条件是什么）
 
 **可视化的工具**
 
-可以考虑使用可视化的工具LaunchControl,试用模式可以查看任务、日志、报错，但是不能保存修改。
+另外可以使用可视化的工具LaunchControl以方便对任务进行调试，试用模式可以查看任务、日志、报错，但是不能保存修改。只有付费购买后才能保存新建/修改的任务，可酌情购买，虽然确实能大大节省调试的时间，但个人License售价$21并不便宜，使用适用模式即可。
 
 ```
 brew install launchcontrol
@@ -115,18 +115,18 @@ brew install launchcontrol
 
 ## 常见问题
 
-1. 权限问题：plist文件中Program需要有可执行权限
+1. 执行权限问题。plist文件中配置的Program需要有可执行权限，可通过如下命令添加
 
 ```
 chmod +x /Users/Me/Scripts/cleanup.sh
 ```
 
-2. 权限问题：如果Program是.sh文件，那么`sh`命令本身需要具有Full Disk Access权限。
-在Privacy&Security -> Full Disk Access中打开sh的权限。如果用的bash/zsh则替换为对应的。
+2. 磁盘权限问题：如果Program是.sh文件，那么`sh`命令本身还需要具有Full Disk Access权限。
+在Privacy&Security -> Full Disk Access中打开sh的权限。如果用bash/zsh则替换为对bash/zsh进行Full Disk Access授权。
 
 ![2023-02-24_14.39.46.png](../../img/2023-02-24_14.39.46.png)
 
-## 手册&工具
+## 参考工具
 
 1. [launchd.info | launchd的完全参考手册](https://www.launchd.info/)
 2. [LaunchControl](https://www.soma-zone.com/LaunchControl/)
