@@ -1,6 +1,6 @@
 ---
 date created: 2023-02-24 14:43:14 +08:00
-date updated: 2023-02-27 01:42:33 +08:00
+date updated: 2023-02-27 01:47:23 +08:00
 title: Launchd
 share: true
 category: Productivity/Mac
@@ -15,6 +15,7 @@ category: Productivity/Mac
 被管理的后台任务有两种类型：Daemon和Agent。
 - Daemon是系统或者管理员定义的维护性程序，在系统启动以后加载
 - Agent是系统/管理员/用户定义的在登陆后才加载的程序
+
 
 按服务类型和配置文件存储路径可进一步划分:
 
