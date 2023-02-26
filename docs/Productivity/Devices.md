@@ -1,9 +1,9 @@
 ---
 date created: 2022-12-13 18:52:58 +08:00
-date updated: 2023-02-26 01:30:49 +08:00
-category: Productivity
+date updated: 2023-02-27 01:35:12 +08:00
+title: Devices
 share: true
-file: Devices
+category: Productivity
 ---
 # Monitor
 - Dell UltraSharp 2412M * 2 (2015~2019 ｜ RMB 1699 + 1749)
