@@ -16,7 +16,6 @@ category: Productivity/Mac
 - Daemon是系统或者管理员定义的维护性程序，在系统启动以后加载
 - Agent是系统/管理员/用户定义的在登陆后才加载的程序
 
-
 按服务类型和配置文件存储路径可进一步划分:
 
 | Type           | Location                      | Run on behalf of         |
