@@ -15,7 +15,7 @@ def update_heading(markdown):
                 heading_number = line.count('#') + 1
                 line = '#' * heading_number + ' ' + line.replace('#', '')
         elif line.startswith('```') and code:
-            code = True
+            code = False
         markdown += line + '\n'
     return markdown
 
