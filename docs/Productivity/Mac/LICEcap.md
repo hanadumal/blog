@@ -1,6 +1,6 @@
 ---
 date created: 2023-03-01 01:16:37 +08:00
-date updated: 2023-03-01 12:07:38 +08:00
+date updated: 2023-03-01 12:49:36 +08:00
 title: LICEcap
 share: true
 category: Productivity/Mac
@@ -20,9 +20,3 @@ LICECAP用来捕捉屏幕的区域，并生成.gif或者.lcf。LCF是LICECAP自�
 - 可以手动设置Max FPS(frames per second)，改变最大帧率。
 
 ![LICEcap界面](../../img/LICEcap_ui.png)
-
-
-<figure markdown>
-  ![Image title](https://dummyimage.com/600x400/){ width="300" }
-  <figcaption>Image caption</figcaption>
-</figure>
