@@ -1,6 +1,6 @@
 ---
 date created: 2023-03-03 13:24:17 +08:00
-date updated: 2023-03-03 21:54:58 +08:00
+date updated: 2023-03-03 22:06:19 +08:00
 title: iterable & iterator
 category: Python
 share: true
@@ -88,9 +88,9 @@ A: 理论上可以，但这不是python的方式。就如同字典(dictionaries)
 # 参考
 [1]. [PEP 234 - Iterator](https://peps.python.org/pep-0234/)
 [2]. [PEP 3114 – Renaming iterator.next() to iterator.__next__()](https://peps.python.org/pep-3114/)
-[2]. [Python Glossary](https://docs.python.org/3/glossary.html)
-[3]. [built-in iter() function](https://docs.python.org/3/library/functions.html#iter)
-[4]. [Iterator wiki](https://wiki.python.org/moin/Iterator)
-[5]. [⭐️ stdtypes Iterator](https://docs.python.org/3/library/stdtypes.html#typeiter)
-[5]. [C Api iterator](https://docs.python.org/3/c-api/iterator.html)
-[6]. [Ka-Ping Yee](http://zesty.ca/)
+[3]. [Python Glossary](https://docs.python.org/3/glossary.html)
+[4]. [built-in iter() function](https://docs.python.org/3/library/functions.html#iter)
+[5]. [Iterator wiki](https://wiki.python.org/moin/Iterator)
+[6]. [⭐️ stdtypes Iterator](https://docs.python.org/3/library/stdtypes.html#typeiter)
+[7]. [C Api iterator](https://docs.python.org/3/c-api/iterator.html)
+[8]. [Ka-Ping Yee](http://zesty.ca/)
