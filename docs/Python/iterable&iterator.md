@@ -1,7 +1,7 @@
 ---
 date created: 2023-03-03 13:24:17 +08:00
 date updated: 2023-03-03 22:06:19 +08:00
-title: iterable & iterator
+title: iterable&iterator
 category: Python
 share: true
 ---
