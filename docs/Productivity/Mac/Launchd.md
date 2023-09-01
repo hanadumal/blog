@@ -1,6 +1,6 @@
 ---
 date created: 2023-02-24 14:43:14 +08:00
-date updated: 2023-02-27 01:47:23 +08:00
+date updated: 2023-04-13 11:48:13 +08:00
 title: Launchd
 share: true
 category: Productivity/Mac
@@ -132,3 +132,4 @@ chmod +x /Users/Me/Scripts/cleanup.sh
 
 1. [launchd.info | launchd的完全参考手册](https://www.launchd.info/)
 2. [LaunchControl](https://www.soma-zone.com/LaunchControl/)
+3. [ss64 launchctl](https://ss64.com/osx/launchctl.html)
