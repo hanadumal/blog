@@ -1,6 +1,6 @@
 ---
 date created: 2023-02-27 14:50:19 +08:00
-date updated: 2023-02-28 21:38:13 +08:00
+date updated: 2023-02-28 21:43:10 +08:00
 title: Kid3
 share: true
 category: Productivity/Mac
@@ -49,6 +49,6 @@ Kid3官网: https://kid3.kde.org/
 
 
 ## 批量修改 | Batch Edit
-在左侧的文件导航中选择多个文件后，可以做为整体对所有选中的文件进行编辑。可以看到Title由于文件名并不相同，所以会显示一个**≠**,Artist Album Comment是一样的，会显示出具体内容。
+在左侧的文件导航中选择多个文件后，可以做为整体对所有选中的文件进行编辑。可以看到Title由于文件名并不相同，所以会显示一个**≠**，Artist Album Comment是一样的，会显示出具体内容。
 
 ![2023-02-28_20.56.59.png](../../img/2023-02-28_20.56.59.png)
